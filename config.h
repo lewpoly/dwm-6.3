@@ -137,14 +137,14 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period,                 focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,                  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period,                 tagmon,         {.i = +1 } },
- 	{ 0,                            XK_F11,                    spawn,          SHCMD("volume.sh down") },
-	{ 0,                            XK_F10,                    spawn,          SHCMD("volume.sh mute") },
-	{ 0,                            XK_F12,                    spawn,          SHCMD("volume.sh up") },
+	{ 0,                            XK_F12,                    spawn,          SHCMD("changevolume up") },
+ 	{ 0,                            XK_F11,                    spawn,          SHCMD("changevolume down") },
+	{ 0,                            XK_F10,                    spawn,          SHCMD("changevolume mute") },
+	{ 0,                            XF86XK_AudioRaiseVolume,   spawn,          SHCMD("changevolume up") },
+	{ 0,                            XF86XK_AudioLowerVolume,   spawn,          SHCMD("changevolume down") },
+	{ 0,                            XF86XK_AudioMute,          spawn,          SHCMD("changevolume mute") },
   { 0,                            XF86XK_MonBrightnessUp,    spawn,          {.v = brupcmd}},
   { 0,                            XF86XK_MonBrightnessDown,  spawn,          {.v = brdowncmd}},
-	{ 0,                            XF86XK_AudioLowerVolume,   spawn,          SHCMD("volume.sh down") },
-	{ 0,                            XF86XK_AudioMute,          spawn,          SHCMD("volume.sh mute") },
-	{ 0,                            XF86XK_AudioRaiseVolume,   spawn,          SHCMD("volume.sh up") },
 	TAGKEYS(                        XK_1,                                      0)
 	TAGKEYS(                        XK_2,                                      1)
 	TAGKEYS(                        XK_3,                                      2)
