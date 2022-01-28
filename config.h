@@ -7,7 +7,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int snap      = 15;       /* snap pixel */
+static const unsigned int snap      = 10;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft = 0;   	/* 0: systray in the right corner, >0: systray on left of status text */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
@@ -99,7 +99,8 @@ static const char *webcmd[]  = { "brave", NULL };
 #include <X11/XF86keysym.h>
 static Key keys[] = {
 	/* modifier                     key                        function        argument */
-	{ MODKEY,                       XK_d,                      spawn,          SHCMD("dmenu_run -c -l 15") },
+	{ MODKEY,                       XK_f,                      spawn,          SHCMD("rofi -show drun") },
+	{ MODKEY,                       XK_e,                      spawn,          SHCMD("rofi -show emoji -modi emoji") },
 	{ MODKEY,                       XK_BackSpace,              spawn,          SHCMD("sysact") },
 	{ MODKEY,			                  XK_semicolon,              spawn,		       SHCMD("feh --bg-fill --randomize ~/pics/wallpaper/* &") },
 	{ MODKEY,			                  XK_r,                      spawn,		       SHCMD(TERMINAL " -e ranger") },
