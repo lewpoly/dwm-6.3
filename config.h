@@ -94,7 +94,7 @@ static const char *webcmd[]  = { "brave", NULL };
 #include <X11/XF86keysym.h>
 static Key keys[] = {
 	/* modifier                     key                        function        argument */
-	{ MODKEY,                       XK_f,                      spawn,          SHCMD("rofi -show drun") },
+	{ MODKEY,                       XK_d,                      spawn,          SHCMD("rofi -show drun") },
 	{ MODKEY,                       XK_e,                      spawn,          SHCMD("rofi -show emoji -modi emoji") },
 	{ MODKEY,                       XK_BackSpace,              spawn,          SHCMD("sysact") },
 	{ MODKEY|ShiftMask,			        XK_p,                      spawn,		       SHCMD("feh --bg-fill --randomize ~/pics/wallpaper/* &") },
@@ -109,6 +109,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return,                 spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_w,                      spawn,          {.v = webcmd } },
 	{ MODKEY,                       XK_b,                      togglebar,      {0} },
+	{ MODKEY,                       XK_f,                      togglefullscr,  {0} },
 	{ MODKEY,                       XK_t,                      setlayout,      {.v = &layouts[0]} }, //tile
 	{ MODKEY,                       XK_m,                      setlayout,      {.v = &layouts[1]} }, //monocle
 	{ MODKEY,                       XK_c,                      setlayout,      {.v = &layouts[11]} }, //centeredmaster
