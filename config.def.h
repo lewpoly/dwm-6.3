@@ -11,12 +11,12 @@ static const unsigned int snap      = 10;       /* snap pixel */
 static const int showbar            = 1;     /* 0 means no bar */
 static const int topbar             = 1;     /* 0 means bottom bar */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
-static const unsigned int gappih    = 25;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 25;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 25;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 25;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 22;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 22;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 22;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 22;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
-static const char *fonts[]          = { "FiraCode Nerd Font:size=10", "JoyPixels:size=9" };
+static const char *fonts[]          = { "FiraCode Nerd Font:size=10", "JoyPixels:size=11" };
 static const char *brupcmd[]            = { "brightnessctl", "set", "10%+", NULL };
 static const char *brdowncmd[]          = { "brightnessctl", "set", "10%-", NULL };
 /* static const char *upvol[]              = { "/usr/bin/pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%",     NULL }; */
@@ -97,12 +97,15 @@ static Key keys[] = {
 	{ MODKEY,                       XK_f,                      spawn,          SHCMD("rofi -show drun") },
 	{ MODKEY,                       XK_e,                      spawn,          SHCMD("rofi -show emoji -modi emoji") },
 	{ MODKEY,                       XK_BackSpace,              spawn,          SHCMD("sysact") },
-	{ MODKEY,			                  XK_p,              spawn,		       SHCMD("feh --bg-fill --randomize ~/pics/wallpaper/* &") },
+	{ MODKEY|ShiftMask,			        XK_p,                      spawn,		       SHCMD("feh --bg-fill --randomize ~/pics/wallpaper/* &") },
 	{ MODKEY,			                  XK_r,                      spawn,		       SHCMD(TERMINAL " -e ranger") },
 	{ MODKEY,			                  XK_y,                      spawn,		       SHCMD("flameshot screen -p ~/pics/screenshots") },
 	{ MODKEY|ShiftMask,			        XK_y,                      spawn,		       SHCMD("flameshot gui -p ~/pics/screenshots") },
 	{ MODKEY|ShiftMask,			        XK_v,                      spawn,		       SHCMD("mpv /dev/video0") },
   { MODKEY,                       XK_Tab,                    spawn,          SHCMD("skippy-xd --toggle-window-picker") },
+	{ MODKEY,                       XK_p,                      spawn,          SHCMD("spotprev") },
+	{ MODKEY,                       XK_n,                      spawn,          SHCMD("spotnext") },
+	{ MODKEY,                       XK_v,                      spawn,          SHCMD("spotpause") },
 	{ MODKEY,                       XK_Return,                 spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_w,                      spawn,          {.v = webcmd } },
 	{ MODKEY,                       XK_b,                      togglebar,      {0} },
