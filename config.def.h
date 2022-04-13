@@ -29,7 +29,7 @@ static const char col_gray4[]       = "#ebcb8b";
 static const char col_cyan[]        = "#8fbcbb";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+	[SchemeNorm] = { col_gray3, col_gray1, col_gray1 },
 	[SchemeSel]  = { col_gray4, col_gray1,  col_cyan  },
 };
 
