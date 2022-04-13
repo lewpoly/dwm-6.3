@@ -16,6 +16,8 @@ static const unsigned int gappiv    = 22;       /* vert inner gap between window
 static const unsigned int gappoh    = 22;       /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov    = 22;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
+#define ICONSIZE 14   /* icon size */
+#define ICONSPACING 6 /* space between icon and title */
 static const char *fonts[]          = { "MesloLGS Nerd Font:size=10", "JoyPixels:size=11" };
 static const char *brupcmd[]            = { "brightnessctl", "set", "10%+", NULL };
 static const char *brdowncmd[]          = { "brightnessctl", "set", "10%-", NULL };
