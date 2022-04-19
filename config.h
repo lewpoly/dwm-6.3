@@ -21,7 +21,7 @@ static const unsigned int gappiv    = 10;       /* vert inner gap between window
 static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov    = 10;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
-static const char *fonts[]          = { "FiraCode Nerd Font:size=10", "JoyPixels:size=9" };
+static const char *fonts[]          = { "FiraCode Nerd Font:size=11", "JoyPixels:size=9" };
 static const char *brupcmd[]            = { "brightnessctl", "set", "10%+", NULL };
 static const char *brdowncmd[]          = { "brightnessctl", "set", "10%-", NULL };
 /* static const char *upvol[]              = { "/usr/bin/pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%",     NULL }; */
@@ -99,7 +99,7 @@ static const char *webcmd[]  = { "brave", NULL };
 #include <X11/XF86keysym.h>
 static Key keys[] = {
 	/* modifier                     key                        function        argument */
-	{ MODKEY,                       XK_f,                      spawn,          SHCMD("rofi -show drun") },
+	{ MODKEY,                       XK_d,                      spawn,          SHCMD("rofi -show drun") },
 	{ MODKEY,                       XK_e,                      spawn,          SHCMD("rofi -show emoji -modi emoji") },
 	{ MODKEY,                       XK_BackSpace,              spawn,          SHCMD("sysact") },
 	{ MODKEY,			                  XK_semicolon,              spawn,		       SHCMD("feh --bg-fill --randomize ~/pics/wallpaper/* &") },
@@ -111,6 +111,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return,                 spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_w,                      spawn,          {.v = webcmd } },
 	{ MODKEY,                       XK_b,                      togglebar,      {0} },
+	{ MODKEY,                       XK_f,                      togglefullscr,  {0} },
 	{ MODKEY,                       XK_t,                      setlayout,      {.v = &layouts[0]} }, //tile
 	{ MODKEY,                       XK_m,                      setlayout,      {.v = &layouts[1]} }, //monocle
 	{ MODKEY,                       XK_c,                      setlayout,      {.v = &layouts[11]} }, //centeredmaster
