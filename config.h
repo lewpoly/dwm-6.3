@@ -25,13 +25,13 @@ static const char col_gray1[]       = "#000";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#d4d4d4";
 static const char col_gray4[]       = "#fff";
-static const char col_cyan[]        = "#005577";
+static const char col_cyan[]        = "#202329";
 static const unsigned int baralpha = 0x70;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeSel]  = { col_gray4, col_gray1,  col_gray4  },
 };
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
@@ -48,9 +48,9 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class             instance  title           tags mask      isfloating  isterminal  noswallow  monitor */
+	/* { "Alacritty",       NULL,     NULL,           0,             0,          1,           0,        -1 }, */
 	{ "Gimp",            NULL,     NULL,           1 << 5,        0,          0,           0,        -1 },
 	{ "discord",         NULL,     NULL,           1 << 4,        0,          0,           0,        -1 },
-	/* { "Alacritty",       NULL,     NULL,           0,             0,          1,           0,        -1 }, */
 	{ NULL,              NULL,     "Event Tester", 0,             0,          0,           1,        -1 }, /* xev */
 };
 
@@ -102,7 +102,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 #include <X11/XF86keysym.h>
 static Key keys[] = {
 	/* modifier                     key                        function        argument */
-  { MODKEY|ShiftMask,             XK_d,                      spawn,          {.v = dmenucmd } },
+  { MODKEY|ShiftMask,             XK_d,                      spawn,          SHCMD("dmenu_run -l 20") },
 	{ MODKEY,                       XK_d,                      spawn,          SHCMD("rofi -show drun") },
 	{ MODKEY,                       XK_e,                      spawn,          SHCMD("rofi -show emoji -modi emoji") },
 	{ MODKEY,                       XK_BackSpace,              spawn,          SHCMD("sysact") },
