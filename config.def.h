@@ -26,7 +26,7 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#d4d4d4";
 static const char col_gray4[]       = "#fff";
 static const char col_cyan[]        = "#005577";
-static const unsigned int baralpha = OPAQUE;
+static const unsigned int baralpha = 0x90;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -166,6 +166,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                                      7)
 	TAGKEYS(                        XK_9,                                      8)
 	{ MODKEY|ShiftMask,             XK_q,                      quit,           {0} },
+	{ MODKEY|ControlMask|ShiftMask, XK_q,                      quit,           {1} }, 
 	{ MODKEY|Mod1Mask,              XK_i,                      incrigaps,      {.i = +1 } },
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_i,                      incrigaps,      {.i = -1 } },
 	{ MODKEY|Mod1Mask,              XK_o,                      incrogaps,      {.i = +1 } },
