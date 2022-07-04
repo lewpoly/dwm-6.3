@@ -20,7 +20,7 @@ static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray             = 1;   /* 0 means no systray */
 static const char *fonts[]          = { "FiraCode Nerd Font:size=13.5", "JoyPixels:size=14" };
-static const char dmenufont[]       = "FiraCode Nerd Font:size=13";
+static const char dmenufont[]       = "FiraCode Nerd Font:size=13.5";
 static const char col_gray1[]       = "#222222";
 /* static const char col_gray1[]       = "#000000"; */
 static const char col_gray2[]       = "#444444";
