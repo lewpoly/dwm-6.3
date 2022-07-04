@@ -19,7 +19,7 @@ static const unsigned int systraypinning = 1;   /* 0: sloppy systray follows sel
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray             = 1;   /* 0 means no systray */
-static const char *fonts[]          = { "FiraCode Nerd Font:size=13.5", "JoyPixels:pixelsize=14:antialias=true:autohint=true", };
+static const char *fonts[]          = { "FiraCode Nerd Font:size=13.5", "JoyPixels:pixelsize=13.5:antialias=true:autohint=true", };
 static const char dmenufont[]       = "FiraCode Nerd Font:size=13.5";
 static const char *brupcmd[]            = { "brightnessctl", "set", "10%+", NULL };
 static const char *brdowncmd[]          = { "brightnessctl", "set", "10%-", NULL };
