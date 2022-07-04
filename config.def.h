@@ -112,7 +112,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 #include <X11/XF86keysym.h>
 static Key keys[] = {
 	/* modifier                     key                        function        argument */
-  { MODKEY|ShiftMask,             XK_d,                      spawn,          SHCMD("dmenu_run -l 20") },
+  { MODKEY|ShiftMask,             XK_d,                      spawn,          SHCMD("dmenu_run -l 20 -bw 1") },
 	{ MODKEY,                       XK_d,                      spawn,          SHCMD("rofi -show drun") },
 	{ MODKEY,                       XK_e,                      spawn,          SHCMD("rofi -show emoji -modi emoji") },
 	{ MODKEY,                       XK_BackSpace,              spawn,          SHCMD("sysact") },
