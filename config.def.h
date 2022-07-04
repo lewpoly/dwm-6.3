@@ -21,6 +21,8 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray             = 1;   /* 0 means no systray */
 static const char *fonts[]          = { "FiraCode Nerd Font:size=13.5", "JoyPixels:size=14" };
 static const char dmenufont[]       = "FiraCode Nerd Font:size=13.5";
+static const char *brupcmd[]            = { "brightnessctl", "set", "10%+", NULL };
+static const char *brdowncmd[]          = { "brightnessctl", "set", "10%-", NULL };
 /* static const char col_gray1[]       = "#222222"; */
 static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#444444";
@@ -33,7 +35,7 @@ static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_gray4  },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_gray3  },
 };
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
@@ -162,8 +164,8 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioRaiseVolume,   spawn,          SHCMD("changevolume up") },
 	{ 0,                            XF86XK_AudioLowerVolume,   spawn,          SHCMD("changevolume down") },
 	{ 0,                            XF86XK_AudioMute,          spawn,          SHCMD("changevolume mute") },
-  /* { 0,                            XF86XK_MonBrightnessUp,    spawn,          {.v = brupcmd}}, */
-  /* { 0,                            XF86XK_MonBrightnessDown,  spawn,          {.v = brdowncmd}}, */
+  { 0,                            XF86XK_MonBrightnessUp,    spawn,          {.v = brupcmd}},
+  { 0,                            XF86XK_MonBrightnessDown,  spawn,          {.v = brdowncmd}},
 	TAGKEYS(                        XK_1,                                      0)
 	TAGKEYS(                        XK_2,                                      1)
 	TAGKEYS(                        XK_3,                                      2)
