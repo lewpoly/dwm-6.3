@@ -5,7 +5,7 @@
 #define TERMCLASS "Alacritty"
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 10;       /* snap pixel */
 static const unsigned int gappih    = 18;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 18;       /* vert inner gap between windows */
@@ -21,14 +21,14 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray             = 1;   /* 0 means no systray */
 static const char *fonts[]          = { "FiraCode Nerd Font:size=13.5", "JoyPixels:size=14" };
 static const char dmenufont[]       = "FiraCode Nerd Font:size=13.5";
-static const char col_gray1[]       = "#222222";
-/* static const char col_gray1[]       = "#000000"; */
+/* static const char col_gray1[]       = "#222222"; */
+static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#d4d4d4";
 static const char col_gray4[]       = "#fff";
 static const char col_cyan[]        = "#005577";
 /* static const char col_cyan[]        = "#042e48"; */
-static const unsigned int baralpha = 0xd0;
+static const unsigned int baralpha = 0x70;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
