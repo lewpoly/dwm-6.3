@@ -21,19 +21,19 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray             = 1;   /* 0 means no systray */
 static const char *fonts[]          = { "FiraCode Nerd Font:size=13.5", "JoyPixels:size=14" };
 static const char dmenufont[]       = "FiraCode Nerd Font:size=13";
-/* static const char col_gray1[]       = "#222222"; */
-static const char col_gray1[]       = "#000000";
+static const char col_gray1[]       = "#222222";
+/* static const char col_gray1[]       = "#000000"; */
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#d4d4d4";
 static const char col_gray4[]       = "#fff";
 static const char col_cyan[]        = "#005577";
 /* static const char col_cyan[]        = "#042e48"; */
-static const unsigned int baralpha = 0x90;
+static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_gray1,  col_gray4  },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_gray4  },
 };
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
