@@ -23,14 +23,14 @@ static const char *fonts[]          = { "FiraCode Nerd Font:size=13.5", "JoyPixe
 static const char dmenufont[]       = "FiraCode Nerd Font:size=13.5";
 static const char *brupcmd[]            = { "brightnessctl", "set", "10%+", NULL };
 static const char *brdowncmd[]          = { "brightnessctl", "set", "10%-", NULL };
-/* static const char col_gray1[]       = "#222222"; */
-static const char col_gray1[]       = "#000000";
+static const char col_gray1[]       = "#222222";
+/* static const char col_gray1[]       = "#000000"; */
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#d4d4d4";
 static const char col_gray4[]       = "#fff";
 static const char col_cyan[]        = "#005577";
 /* static const char col_cyan[]        = "#042e48"; */
-static const unsigned int baralpha = 0x70;
+static const unsigned int baralpha = OPAQUE;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
