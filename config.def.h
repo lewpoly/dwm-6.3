@@ -56,12 +56,12 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class             instance  title           tags mask  iscentered    isfloating  isterminal  noswallow  monitor */
-	{ "Alacritty",       NULL,     NULL,           0,         0,            0,          1,           0,        -1 },
-	/* { "St",              NULL,     NULL,           0,         0,            0,          1,           0,        -1 }, */
-	{ "Gimp",            NULL,     NULL,           1 << 5,    0,            0,          0,           0,        -1 },
-	{ "discord",         NULL,     NULL,           1 << 4,    0,            0,          0,           0,        -1 },
-	{ NULL,              NULL,     "Event Tester", 0,         0,            0,          0,           1,        -1 }, /* xev */
+	/* class             instance  title           tags mask   isfloating  isterminal  noswallow  monitor */
+	{ "Alacritty",       NULL,     NULL,           0,          0,          1,           0,        -1 },
+	{ "St",              NULL,     NULL,           0,          0,          1,           0,        -1 },
+	{ "Gimp",            NULL,     NULL,           1 << 5,     0,          0,           0,        -1 },
+	{ "discord",         NULL,     NULL,           1 << 4,     0,          0,           0,        -1 },
+	{ NULL,              NULL,     "Event Tester", 0,          0,          0,           1,        -1 }, /* xev */
 };
 
 /* layout(s) */
@@ -176,8 +176,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                                      6)
 	TAGKEYS(                        XK_8,                                      7)
 	TAGKEYS(                        XK_9,                                      8)
-	{ MODKEY|ShiftMask,             XK_q,                      quit,           {0} },
-	{ MODKEY|ControlMask|ShiftMask, XK_q,                      quit,           {1} }, 
+	/* { MODKEY|ShiftMask,             XK_q,                      quit,           {0} }, */
+	{ MODKEY|ControlMask,           XK_q,                      quit,           {1} }, 
 	{ MODKEY|Mod1Mask,              XK_i,                      incrigaps,      {.i = +1 } },
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_i,                      incrigaps,      {.i = -1 } },
 	{ MODKEY|Mod1Mask,              XK_o,                      incrogaps,      {.i = +1 } },
