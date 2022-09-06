@@ -1,16 +1,16 @@
 /* See LICENSE file for copyright and license details. */
 
 /* Constants */
-#define TERMINAL "alacritty"
-#define TERMCLASS "Alacritty"
+#define TERMINAL "kitty"
+#define TERMCLASS "Kitty"
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 10;       /* snap pixel */
-static const unsigned int gappih    = 18;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 18;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 18;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 18;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 12;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 12;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 12;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 12;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -19,22 +19,22 @@ static const unsigned int systraypinning = 1;   /* 0: sloppy systray follows sel
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray             = 1;   /* 0 means no systray */
-static const char *fonts[]          = { "FiraCode Nerd Font:size=13.5", "JoyPixels:pixelsize=13.5:antialias=true:autohint=true", };
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=14", "JoyPixels:pixelsize=14:antialias=true:autohint=true", };
 static const char dmenufont[]       = "FiraCode Nerd Font:size=13.5";
 static const char *brupcmd[]            = { "brightnessctl", "set", "10%+", NULL };
 static const char *brdowncmd[]          = { "brightnessctl", "set", "10%-", NULL };
-static const char col_gray1[]       = "#222222";
-/* static const char col_gray1[]       = "#000000"; */
+// static const char col_gray1[]       = "#222222";
+static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#d4d4d4";
 static const char col_gray4[]       = "#fff";
 static const char col_cyan[]        = "#005577";
-/* static const char col_cyan[]        = "#042e48"; */
-static const unsigned int baralpha = OPAQUE;
+static const unsigned int baralpha = 90;
+// static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+	[SchemeNorm] = { col_gray4, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_gray3  },
 };
 static const unsigned int alphas[][3]      = {
@@ -60,6 +60,7 @@ static const Rule rules[] = {
 	 */
 	/* class             instance  title           tags mask   isfloating  isterminal  noswallow  monitor */
 	{ "Alacritty",       NULL,     NULL,           0,          0,          1,           0,        -1 },
+	{ "kitty",           NULL,     NULL,           0,          0,          1,           0,        -1 },
 	{ "St",              NULL,     NULL,           0,          0,          1,           0,        -1 },
 	{ "Gimp",            NULL,     NULL,           1 << 5,     0,          0,           0,        -1 },
 	{ "discord",         NULL,     NULL,           1 << 4,     0,          0,           0,        -1 },
@@ -106,7 +107,7 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "kitty", NULL };
 static const char *webcmd[]  = { "brave", NULL };
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL };
