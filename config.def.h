@@ -27,9 +27,10 @@ static const char *brdowncmd[]          = { "brightnessctl", "set", "10%-", NULL
 static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#d4d4d4";
+// static const char col_gray3[]       = "#ebdbb2";
 static const char col_gray4[]       = "#fff";
 static const char col_cyan[]        = "#005577";
-static const unsigned int baralpha = 90;
+static const unsigned int baralpha = 190;
 // static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
@@ -108,7 +109,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *termcmd[]  = { "kitty", NULL };
-static const char *webcmd[]  = { "brave", NULL };
+static const char *webcmd[]  = { "firefox", NULL };
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL };
 
@@ -180,21 +181,21 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                                      7)
 	TAGKEYS(                        XK_9,                                      8)
 	/* { MODKEY|ShiftMask,             XK_q,                      quit,           {0} }, */
-	{ MODKEY|ControlMask,           XK_q,                      quit,           {1} }, 
-	{ MODKEY|Mod1Mask,              XK_i,                      incrigaps,      {.i = +1 } },
-	{ MODKEY|Mod1Mask|ShiftMask,    XK_i,                      incrigaps,      {.i = -1 } },
-	{ MODKEY|Mod1Mask,              XK_o,                      incrogaps,      {.i = +1 } },
-	{ MODKEY|Mod1Mask|ShiftMask,    XK_o,                      incrogaps,      {.i = -1 } },
-	{ MODKEY|Mod1Mask,              XK_6,                      incrihgaps,     {.i = +1 } },
-	{ MODKEY|Mod1Mask|ShiftMask,    XK_6,                      incrihgaps,     {.i = -1 } },
-	{ MODKEY|Mod1Mask,              XK_7,                      incrivgaps,     {.i = +1 } },
-	{ MODKEY|Mod1Mask|ShiftMask,    XK_7,                      incrivgaps,     {.i = -1 } },
-	{ MODKEY|Mod1Mask,              XK_8,                      incrohgaps,     {.i = +1 } },
-	{ MODKEY|Mod1Mask|ShiftMask,    XK_8,                      incrohgaps,     {.i = -1 } },
-	{ MODKEY|Mod1Mask,              XK_9,                      incrovgaps,     {.i = +1 } },
-	{ MODKEY|Mod1Mask|ShiftMask,    XK_9,                      incrovgaps,     {.i = -1 } },
-	{ MODKEY,                       XK_g,                      togglegaps,     {0} },
-	{ MODKEY|ShiftMask,             XK_g,                      defaultgaps,    {0} },
+	// { MODKEY|ControlMask,           XK_q,                      quit,           {1} }, 
+	// { MODKEY|Mod1Mask,              XK_i,                      incrigaps,      {.i = +1 } },
+	// { MODKEY|Mod1Mask|ShiftMask,    XK_i,                      incrigaps,      {.i = -1 } },
+	// { MODKEY|Mod1Mask,              XK_o,                      incrogaps,      {.i = +1 } },
+	// { MODKEY|Mod1Mask|ShiftMask,    XK_o,                      incrogaps,      {.i = -1 } },
+	// { MODKEY|Mod1Mask,              XK_6,                      incrihgaps,     {.i = +1 } },
+	// { MODKEY|Mod1Mask|ShiftMask,    XK_6,                      incrihgaps,     {.i = -1 } },
+	// { MODKEY|Mod1Mask,              XK_7,                      incrivgaps,     {.i = +1 } },
+	// { MODKEY|Mod1Mask|ShiftMask,    XK_7,                      incrivgaps,     {.i = -1 } },
+	// { MODKEY|Mod1Mask,              XK_8,                      incrohgaps,     {.i = +1 } },
+	// { MODKEY|Mod1Mask|ShiftMask,    XK_8,                      incrohgaps,     {.i = -1 } },
+	// { MODKEY|Mod1Mask,              XK_9,                      incrovgaps,     {.i = +1 } },
+	// { MODKEY|Mod1Mask|ShiftMask,    XK_9,                      incrovgaps,     {.i = -1 } },
+	// { MODKEY,                       XK_g,                      togglegaps,     {0} },
+	// { MODKEY|ShiftMask,             XK_g,                      defaultgaps,    {0} },
 };
 
 /* button definitions */
